@@ -1,5 +1,3 @@
-// MQ-2 Smoke Sensor Circuit with Raspberry Pi
-
 import time
 import botbook_mcp3002 as mcp #
 
