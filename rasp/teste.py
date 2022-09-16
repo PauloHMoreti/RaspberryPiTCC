@@ -8,7 +8,7 @@ try:
         if GPIO.input(4):
             print("Vazando")
         else:
-        print("Safe")
+            print("Safe")
 
         sleep(1)
 
