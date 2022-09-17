@@ -19,7 +19,7 @@ try:
 
         if vazamento > 4:
             print("Enviando dados para o servidor")
-        sleep(10)
+            sleep(10)
 
 finally:
     print("Termina")
