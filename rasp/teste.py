@@ -7,11 +7,14 @@ try:
     while True:
         if GPIO.input(4):
             print("Vazando")
+            print(GPIO.value(4))
         else:
             print("Safe")
+            print(GPIO.value(4))
 
         sleep(1)
 
 finally:
     print("Termina")
     GPIO.cleanup()
+
