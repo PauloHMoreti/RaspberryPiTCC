@@ -1,18 +1,27 @@
+#Importando as bibliotecas:
 import RPi.GPIO as GPIO
 from time import sleep
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(4, GPIO.IN)
+import requests
+from getmac import get_mac_address as deviceNumber
 
+#Configurações Gerais:
+portaSensor = 4
 vazamento = 0
 
+#Configurações do GPIO:
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(portaSensor, GPIO.IN)
+sensor = GPIO.input(portaSensor)
+
+#Codigo Principal:
 try:
     while True:
-        if GPIO.input(4):
+        if sensor:
             print("Sem Vazamento")
-            print(GPIO.input(4))
+            print(sensor)
         else:
             print("Tá Vazando")
-            print(GPIO.input(4))
+            print(sensor)
             vazamento += 1
         
         sleep(1)
